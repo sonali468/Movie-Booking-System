@@ -1,4 +1,4 @@
-#Movie Booking System
+Movie Booking System
 
 
 Introduction
