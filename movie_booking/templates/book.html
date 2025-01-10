@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tickets - Movie Ticket Booking System</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Book Your Tickets</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/book">Book Tickets</a></li>
+                <li><a href="/seats">View Seats</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Fill in Your Details</h2>
+            <form action="/book" method="POST" onsubmit="redirectAfterBooking()">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="seat">Select Seat:</label>
+                <select id="seat" name="seat">
+                    {% for seat in seats %}
+                        <option value="{{ seat }}" {% if request.args.get('seat') == seat %}selected{% endif %}>
+                            {{ seat }}
+                        </option>
+                    {% endfor %}
+                </select>
+
+                <label for="priority">Priority Booking:</label>
+                <select id="priority" name="priority">
+                    <option value="Regular">Regular</option>
+                    <option value="VIP">VIP</option>
+                </select>
+
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Movie Ticket Booking System by Sonali Chandra</p>
+    </footer>
+
+    <script>
+        function redirectAfterBooking() {
+            window.location.href = "/seats?message=success";
+            return false;
+        }
+    </script>
+</body>
+</html>

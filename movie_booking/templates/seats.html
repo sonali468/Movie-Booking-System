@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Seats - Movie Ticket Booking System</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Available Seats</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/book">Book Tickets</a></li>
+                <li><a href="/seats">View Seats</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Screen is here!</h2>
+            <div class="seats-grid">
+                {% for seat in seats %}
+                    <a href="{{ url_for('book_ticket', seat=seat) }}">
+                        <div class="seat">{{ seat }}</div>
+                    </a>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="popup" id="popup">
+                <p>{{ messages[0] }}</p>
+                <button onclick="closePopup()">OK</button>
+            </div>
+        {% endif %}
+    {% endwith %}
+
+
+    <script>
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Movie Ticket Booking System</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Movie Ticket Booking System</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/book">Book Tickets</a></li>
+                <li><a href="/seats">View Seats</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Book Your Tickets Now!</h2>
+            <p>Choose your favorite movie, select a seat, and enjoy a great cinematic experience.</p>
+        </section>
+        <section class="movie-selection">
+            <div class="movie-box">
+                <a href="{{ url_for('seats', movie='Movie1') }}">
+                    <img src="/static/movie1.jpg" alt="Movie 1">
+                    <p>Tangled</p>
+                </a>
+            </div>
+            <div class="movie-box">
+                <a href="{{ url_for('seats', movie='Movie2') }}">
+                    <img src="/static/movie2.jpg" alt="Movie 2">
+                    <p>Avengers Endgame</p>
+                </a>
+            </div>
+            <div class="movie-box">
+                <a href="{{ url_for('seats', movie='Movie3') }}">
+                    <img src="/static/movie3.jpg" alt="Movie 3">
+                    <p>The Karate Kid</p>
+                </a>
+            </div>
+            <div class="movie-box">
+                <a href="{{ url_for('seats', movie='Movie4') }}">
+                    <img src="/static/movie4.jpg" alt="Movie ">
+                    <p>Inception</p>
+                </a>
+            </div>
+            <div class="movie-box">
+                <a href="{{ url_for('seats', movie='Movie5') }}">
+                    <img src="/static/movie5.jpg" alt="Movie 5">
+                    <p>Home Alone</p>
+                </a>
+            </div>
+            <div class="movie-box">
+                <a href="{{ url_for('seats', movie='Movie6') }}">
+                    <img src="/static/movie6.jpg" alt="Movie 6">
+                    <p>Pokémon</p>
+                </a>
+            </div>
+            <div class="movie-box">
+                <a href="{{ url_for('seats', movie='Movie7') }}">
+                    <img src="/static/movie7.jpg" alt="Movie 7">
+                    <p>The Conjuring</p>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Movie Ticket Booking System by Sonali Chandra</p>
+    </footer>
+</body>
+</html>
