@@ -1,4 +1,4 @@
-Movie Booking System
+#Movie Booking System
 
 
 Introduction
@@ -14,11 +14,8 @@ The traditional movie ticket booking process involves manual operations, long qu
 Expected Outcome
 
 •	Browse available movies.
-
 •	Select seats based on availability.
-
 •	Book tickets efficiently.
-
 •	Manage bookings with VIP prioritization.
 
 The solution includes a graphical seat selection interface, efficient data handling using priority queues for VIP bookings, and a graph-based seat allocation system.
@@ -28,19 +25,14 @@ Requirements
 Data Structures:
 
 •	Graph: Used to represent the seating arrangement and establish connections between adjacent seats.
-
 •	Priority Queue (Heap): Manages VIP bookings based on priority levels.
-
 •	Queue (Deque): Handles regular bookings in a first-come, first-served manner.
 
 Software:
 
 •	Python: Backend logic using Flask framework.
-
 •	HTML & CSS: Frontend development for creating web pages.
-
 •	Flask: Web framework to build the application.
-
 •	Heapq & Collections: Python libraries for priority queues and deques.
 
 
@@ -54,9 +46,7 @@ Phase 1: Requirement Analysis: Identify the functionalities required for the sys
 Phase 2: Design and Implementation
 
 •	Graph Implementation: The graph represents the theatre’s seating layout. Each seat is a node, and edges connect adjacent seats. This helps in managing seat adjacency checks and ensuring that group bookings are handled efficiently.
-
 •	Priority Queue for VIP Bookings: VIP bookings are added to a min-heap based on their priority level. The heapq library in Python is used to implement this priority queue efficiently.
-
 •	Queue for Regular Bookings: A queue (deque) is utilized to handle regular bookings on a first-come, first-served basis. The collections module in Python provides an efficient deque implementation.
 
 Phase 4: Booking Workflow
