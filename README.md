@@ -1,17 +1,17 @@
-Movie Booking System
+# Movie Booking System
 
 
-Introduction
+# Introduction
 
 The Movie Booking System is a web-based application designed to provide users with a seamless experience in booking movie tickets online. The system allows users to view available movies, select seats, and confirm their bookings, making the ticketing process efficient and user-friendly. By integrating data structures like graphs, queues, and heaps, this project aims to optimize seat allocation and booking management.
 
 
-Problem Domain
+# Problem Domain
 
 The traditional movie ticket booking process involves manual operations, long queues, and high chances of errors in seat allocation. Additionally, VIP seat prioritization is often overlooked in traditional systems. The need for an automated, efficient, and user-friendly solution to manage bookings and seat assignments led to the development of this Movie Booking System.
 
 
-Expected Outcome
+# Expected Outcome
 
 •	Browse available movies.
 
@@ -22,8 +22,8 @@ Expected Outcome
 •	Manage bookings with VIP prioritization.
 
 The solution includes a graphical seat selection interface, efficient data handling using priority queues for VIP bookings, and a graph-based seat allocation system.
-Requirements
 
+# Requirements
 
 Data Structures:
 
@@ -44,8 +44,7 @@ Software:
 •	Heapq & Collections: Python libraries for priority queues and deques.
 
 
-
-Methodology
+# Methodology
 
 The methodology for developing the Movie Booking System involves the following steps:
 
@@ -70,9 +69,6 @@ Phase 4: Booking Workflow
 Phase 5: Testing : Ensure that the system works efficiently by testing various booking scenarios.
 
 
-
-Sample Screenshots 
-
 Home page:
 
 ![image](https://github.com/user-attachments/assets/b9a0b0f9-46b3-4c53-8582-5d4f4745f373)
@@ -86,6 +82,6 @@ Booking Tickts page:
 ![image](https://github.com/user-attachments/assets/099ee0e3-c8e2-495d-accc-c81c60d93ba4)
 
 
-Summary:
+# Summary:
 
 The Movie Booking System provides a modern solution to traditional ticket booking problems. By utilizing efficient data structures like graphs and priority queues, it enhances seat management and booking processes. The application is scalable and can be extended to include more features, such as payment integration and user accounts, making it a comprehensive movie booking platform.
